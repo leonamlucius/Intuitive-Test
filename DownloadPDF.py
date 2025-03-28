@@ -2,7 +2,7 @@ import requests
 from requests.auth import HTTPBasicAuth # Lib não built-in no python. Download: pip install requests
 from bs4 import BeautifulSoup # Lib não built-in no python.  Download: pip install beautifulsoup4
 import os
-from urllib.parse import urljoin
+from urllib.parse import urljoin  # Lib não built-in no python.  Download: pip install urllib3
 import zipfile
 import pathlib 
 
@@ -47,7 +47,7 @@ def scrape():
 
         for file_path in directory.iterdir():
             
-            if file_path.name == "DownloadPDF.py" or file_path.name == ".git" or file_path.name == "anexos.zip":
+            if file_path.name == "DownloadPDF.py" or file_path.name == ".git" or file_path.name == "anexos.zip" or file_path.name == "README.md":
                 pass
             else:
                 print(file_path.name)
